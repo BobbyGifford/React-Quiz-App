@@ -2,23 +2,14 @@ import React from "react";
 
 import AnswerFields from "../components/AnswerFields";
 import TopDisplay from "../components/TopDisplay";
+import quizes from "../quizes"
 
 class BaseQuiz extends React.Component {
   state = {
     currentAnswer: null,
     currentIndex: 0,
     answerCorrectly: 0,
-    quiz: [
-      { question: "What does the R in MERN stack stand for?", answer: "react" },
-      {
-        question: "What language is behind the Django framework?",
-        answer: "python"
-      },
-      {
-        question: "What language is behind the Node framework",
-        answer: "javascript"
-      }
-    ]
+    quiz: quizes.simple
   };
 
   answerChangedHandler = event => {
