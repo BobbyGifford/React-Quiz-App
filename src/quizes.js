@@ -9,5 +9,8 @@ module.exports = {
           question: "What language is behind the Node framework",
           answer: "javascript"
         }
+      ],
+      hard: [
+        { question: "What color is this bar now?", answer: "red" }
       ]
 }
