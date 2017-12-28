@@ -60,10 +60,21 @@ class BaseQuiz extends React.Component {
     let finishButton = null;
 
     if (this.state.hardMode === true) {
-      finishButton = <div>You're done</div>;
+      finishButton = (
+        <div>
+          <p className="lead">Congratulations</p>
+          <button onClick={this.props.onFinished} className="btn btn-info">
+            View Prize
+          </button>
+        </div>
+      );
     } else {
       finishButton = (
-        <button onClick={() => this.toHard()} className="btn btn-danger">
+        <button
+          style={{ marginTop: "5px" }}
+          onClick={() => this.toHard()}
+          className="btn btn-danger"
+        >
           To Hard Mode
         </button>
       );
@@ -74,7 +85,6 @@ class BaseQuiz extends React.Component {
         <div>
           <TopDisplay
             colorChoice={this.state.colorChoice}
-            className="Simple"
             title="Perfect Score"
           />{" "}
           {finishButton}
